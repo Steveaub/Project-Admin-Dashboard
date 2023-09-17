@@ -9,13 +9,17 @@
  --ocean-blue: #0a5367;
  --soft-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
  --light-stone: #e2e0df;
- --pale-silver: #f8f8f7;
+ --pale-silver: #8717b7;
  
  
 
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ 
+  *, *::before, *::after {
+    box-sizing: border-box;
+}
 
 
 html{
@@ -24,7 +28,7 @@ html{
 
 body {
     
-    height: 100%;
+    /* height: 100%; */
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto auto;
@@ -44,7 +48,7 @@ body {
 
   .sidebar {
     color: #e2e0df;
-    background-color: #2c3e50;
+    background-color: #3498db;;
     grid-area: sidebar;
   }
 /* Header styles */
@@ -64,17 +68,123 @@ body {
 
   header {
     grid-area: header;
+    padding:  25px;
+   
   }
   
   .material-symbols-outlined {
     cursor: pointer;
   }
 
-  .profile-picture {
+  .picture {
     background: var(--top-profile-picture) center center / cover no-repeat;
     border-radius: 50%;
     width: 50px;  
     height: 50px; 
 }
 
- 
+.searchbar {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 100%;
+}
+
+.search label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.magnify {
+  font-size: 1.8rem;
+
+}
+
+ #search {
+  display: inline-block;
+  border: 0;
+  background-color: var( --light-stone);
+  padding: 0.75em 2em;
+  outline-color: var(--pale-silver);
+  margin-left: 1.25rem;
+  border-radius: 99em;
+  width: min(80%, 700px);
+}
+
+
+
+
+
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    width: 100px;
+}
+
+.blue-button:hover {
+    background-color: #2980b9;
+}
+
+
+
+.header-top {
+  display: grid;
+grid-template-columns: 1fr max-content;
+align-content: center;
+
+}
+
+.header-top-right {
+  display: grid;
+  grid-template-columns: repeat(3,max-content);
+  gap: 16px;
+}
+.header-bottom {
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: max-content max-content 1fr
+}
+.header-bottom > .picture {
+  width: 70px;
+    height: 70px
+}
+.buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-self:end ;
+}
+.hello {
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: 900;
+
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  
+}
+
+
+/* .sidebar styles */
+
+
+.sidebar {
+
+
+}
