@@ -20,7 +20,9 @@
   *, *::before, *::after {
     box-sizing: border-box;
 }
-
+li{
+  list-style-type: none;
+}
 
 html{
     font-family: 'Roboto', sans-serif;
@@ -30,7 +32,7 @@ body {
     
     /* height: 100%; */
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 300px 4fr;
     grid-template-rows: auto auto;
     grid-template-areas: 
     "sidebar header"
@@ -47,6 +49,10 @@ body {
   }
 
   .sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    
     color: #e2e0df;
     background-color: #3498db;;
     grid-area: sidebar;
@@ -184,7 +190,17 @@ align-content: center;
 /* .sidebar styles */
 
 
-.sidebar {
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.sidebar > ul:nth-child(1) > li { 
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-left: 0%;
+}
 
-
+.sidebar > ul:nth-child(2) > li:nth-child(1) { 
+  font-weight: 900;
 }
