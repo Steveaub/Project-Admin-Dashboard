@@ -46,6 +46,8 @@ body {
   .main-content {
     background-color: #ecf0f1;
     grid-area: main;
+   display: flex;
+    
   }
 
   .sidebar {
@@ -204,3 +206,20 @@ align-content: center;
 .sidebar > ul:nth-child(2) > li:nth-child(1) { 
   font-weight: 900;
 }
+
+
+/* .main-content styles */
+
+.main-content ul li {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  margin: 20px auto;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  grid-area: list;
+  box-shadow: -8px 0 10px -5px #FF69B4;
+}
+
