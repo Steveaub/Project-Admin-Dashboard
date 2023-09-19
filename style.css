@@ -49,12 +49,6 @@
      
    }
  
-   .main-content {
-     background-color: #ecf0f1;
-     grid-area: main;
-    display: flex;
-     
-   }
  
    .sidebar {
      display: grid;
@@ -216,7 +210,71 @@
  
  
  /* .main-content styles */
+
+   .main-content {
+     background-color: #ecf0f1;
+     grid-area: main;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:  */
+   
+    
+    
+    ;
+     
+   }
  
+  
+   .main-content ul:nth-child(1) {
+    background-color: #8717b7;
+    width: 100%;
+    height: 100%;
+display: grid;
+grid-template-columns: auto auto ;
+grid-template-rows: auto auto;
+grid-template-areas:
+"card1 card2 announcements" 
+" card3 card4 announcements"
+"card5 card6 Trending"
+;
+  }
+
+  .card1 {
+    grid-area: card1;
+    
+  }
+  .card2 {
+    grid-area: card2;
+    
+  }
+  .card3 {
+    grid-area: card3;
+    
+  }
+  .card4 {
+    grid-area: card4;
+    
+  }
+  .card5 {
+    grid-area: card5;
+    
+  }
+  .card6 {
+    grid-area: card6;
+    
+  }
+  .announcements {
+    grid-area: announcements;
+    
+  }
+  .Trending {
+    grid-area: Trending;
+    
+  }
+
+  
+              
+
  .main-content ul li {
    background-color: #ffffff;
    border-radius: 8px;
@@ -226,9 +284,15 @@
    margin: 20px auto;
    overflow: hidden;
    transition: box-shadow 0.3s ease-in-out;
-   grid-area: list;
+   
    box-shadow: -8px 0 10px -5px #FF69B4;
  }
+
+
+
+
+
+
 
  .actions {
   display: flex;
