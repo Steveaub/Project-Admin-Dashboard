@@ -50,15 +50,7 @@
    }
  
  
-   .sidebar {
-     display: grid;
-     grid-template-columns: 1fr;
-     justify-items: start;
-     
-     color: #e2e0df;
-     background-color: #3498db;;
-     grid-area: sidebar;
-   }
+
  /* Header styles */
  
  
@@ -191,32 +183,84 @@
  
  
  /* .sidebar styles */
+
+ .sidebar {
+ 
+  justify-items: start;
+  
+  color: #e2e0df;
+  background-color: #3498db;;
+  grid-area: sidebar;
+}
  
  
  .sidebar ul li {
    display: flex;
    align-items: center;
    gap: 20px;
+   font-size: 1.4rem;
+   padding-top: 30px;
  }
  .sidebar > ul:nth-child(1) > li { 
    font-size: 1.5rem;
    font-weight: 900;
    margin-left: 0%;
+   padding-top: 20px;
  }
  
  .sidebar > ul:nth-child(2) > li:nth-child(1) { 
    font-weight: 900;
+   padding-top: 35px;
  }
- 
- 
+ .sidebar > ul:nth-child(3)  { 
+  
+  padding-top: 35px;
+}
+
+
  /* .main-content styles */
+ 
+ 
+ .main-content .card1,
+.main-content .card2,
+.main-content .card3,
+.main-content .card4,
+.main-content .card5,
+.main-content .card6 {
+    height: 250px;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .Project-title {
+  grid-area: projects;
+ padding-left: 20px;
+ padding-bottom: 0%;
+ margin-bottom: 0%;
+
+ }
+ .announce-title {
+  grid-area: announcement;
+padding-left: 40px;
+padding-bottom: 0%;
+ margin-bottom: 0%
+ }
+
+ .trend-title {
+  padding-left:40px;
+ 
+ }
+
+ 
 
    .main-content {
      background-color: #ecf0f1;
      grid-area: main;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:  */
    
     
     
@@ -226,16 +270,17 @@
  
   
    .main-content ul:nth-child(1) {
-    background-color: #8717b7;
+    
     width: 100%;
     height: 100%;
 display: grid;
-grid-template-columns: auto auto ;
-grid-template-rows: auto auto;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
 grid-template-areas:
+"projects .  announcement"
 "card1 card2 announcements" 
-" card3 card4 announcements"
-"card5 card6 Trending"
+" card3 card4 Trending"
+"card5 card6 ."
 ;
   }
 
@@ -272,7 +317,8 @@ grid-template-areas:
     
   }
 
-  
+
+ 
               
 
  .main-content ul li {
@@ -281,6 +327,7 @@ grid-template-areas:
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    padding: 20px;
    max-width: 300px;
+   
    margin: 20px auto;
    overflow: hidden;
    transition: box-shadow 0.3s ease-in-out;
